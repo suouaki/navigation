@@ -701,7 +701,7 @@ export default {
         }
         if (url.pathname === '/api/verifyPassword' && request.method === 'POST') {
             const { password } = await request.json();
-            const isValid = password === '1160301';
+            const isValid = password === '密码';
             return new Response(JSON.stringify({ valid: isValid }), {
                 status: isValid ? 200 : 403,
                 headers: { 'Content-Type': 'application/json' }
